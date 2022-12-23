@@ -36,25 +36,29 @@ $(function () {
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
 
- 
+  // WILL NEED AN IF STATEMENT - WRITE A FOR LOOP INSIDE
+  // const currentHour = new Date().getHours();
+  // const timeBlocks = $("")
+  // array of time-block
 
   for (let index = 0; index < timeBlocksEl.length; index++) {
     const timeBlock = timeBlocksEl[index];
 
     // turned the id class into a number only string for if statement
     var blockHour = timeBlock.getAttribute("id").substr(5, 6)
+    console.log(blockHour)
 
     if (blockHour < dayjs().format("H")) {
       console.log("past")
-      blockHour.classList.add("past");
+      timeBlock.classList.add("past");
     }
     else if (blockHour == dayjs().format("H")) {
       console.log("present")
-      blockHour.classList.add("present");
+      timeBlock.classList.add("present");
     }
     else {
       console.log("future")
-      blockHour.classList.add("future");
+      timeBlock.classList.add("future");
     }
   }
 
