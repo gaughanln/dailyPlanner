@@ -5,6 +5,9 @@
 var currentDayEl = $("#currentDay");
 var timeBlocksEl = document.querySelectorAll(".time-block")
 console.log(timeBlocksEl)
+
+var descriptionEl = document.getElementsByClassName("description");
+var saveEl = document.getElementsByClassName("save");
 // today's date (edit variables)
 // var currentDayEl = dayjs().format('MMM D, YYYY');
 // $('#currentDay').text(currentDayEl);
@@ -15,7 +18,7 @@ function displayTime() {
 }
 displayTime();
 
-$(function () {
+
   // TODO: Add a listener for click events on the save button. This code should
 
   // use the id in the containing time-block as a key to save the user input in
@@ -70,10 +73,27 @@ $(function () {
   // REFERENCE JAVASCRIPT QUIZ FOR THIS
   // HOW DO WE RETRIEVE FROM LOCAL STORAGE ?
 
+  // document.getElementsByClassName("description").innerHTML = description;
+  // description.textContent = "";
+
+  // initiates the submit button to save initials
+  saveEl.addEventListener("click", function save(event) {
+    event.preventDefault();
+
+    description = description.value;
+    console.log(description);
+
+    //  saves the score in local storage
+    localStorage.setItem("description", description);
+
+    // save();
+
+  })
+  save();
   //
   // TODO: Add code to display the current date in the header of the page.
 
-});
+
 
 
 
