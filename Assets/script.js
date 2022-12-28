@@ -59,12 +59,6 @@ timeBlocksEl.item(0).addEventListener("click", function() {
 // STEP 4
 // WHEN I click into a timeblock
 // THEN I can enter an event
-// isn't this already done?
-
-
-
-
-//
 
 // STEP 5
 // WHEN I click the save button for that timeblock
@@ -72,35 +66,33 @@ timeBlocksEl.item(0).addEventListener("click", function() {
 
 // TODO: Add code to get any user input that was saved in localStorage and set the values of the corresponding textarea elements. HINT: How can the id attribute of each time-block be used to do this?
 
-// commented out
-// the value of the description element
-function saveToStorage() {
- var descriptionValue = descriptionEl.value;
+
+// setting up the click function for the save button , storing the textarea description
+$(document).ready(function() {
+  $('.saveBtn').click(function() {
+   
+    // storing the time-block id so we can so we can pull it for local storage
+    var timeBlockId = $(this).closest('.time-block').attr('id');
+
+    // stores the text in local storage
+    var text = $('#' + timeBlockId + ' textarea').val();
+        localStorage.setItem(timeBlockId, text);
+  });
+}); 
+
+// retrieving and setting the value of the textarea description for each time-block 
+$(document).ready(function() {
+
+  $('.time-block').each(function() {
+    var timeBlockId = $(this).attr('id');
+
+    // getting the description to stay on the page - pulling it from local storage
+    var storedText = localStorage.getItem(timeBlockId);
+    $('#' + timeBlockId + ' textarea').val(storedText);
+  });
+});
 
 
- //  saves the info in local storage
- localStorage.setItem("description", descriptionValue);
 
-// retrieves the local storage
- var storedDescription = localStorage.getItem("description");
- descriptionEl.innerHTML = storedDescription;
- console.log(descriptionEl)
-
-
-}
-saveToStorage();
-saveBtnEl.addEventListener("click", saveToStorage);
-
-
-
-
-
-// STEP 4
-// WHEN I click the save button for that timeblock
-// THEN the text for that event is saved in local storage
-
-// STEP 5
-// WHEN I refresh the page
-// THEN the saved events persist
 
 
