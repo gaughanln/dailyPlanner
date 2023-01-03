@@ -2,7 +2,7 @@
 
 ## Description
 
-I've created a calendar application that will display the current date, color differientate between past, present, and future, as well as save and retrieve content from local storage. This was done using jquery and day.js.
+I've created a calendar application that will display the current date, color differentiate between past, present, and future, as well as save and retrieve content from local storage. This was done using jquery and day.js.
 
 #### Criteria:
 
