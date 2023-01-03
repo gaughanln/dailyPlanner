@@ -21,7 +21,7 @@ Below is a screenshot of the planner.
 
 <!-- link -->
 #### Deployment
-Here is the [link](https://gaughanln.github.io/JavaScriptQuiz/) to the live website
+Here is the [link](https://gaughanln.github.io/dailyPlanner/) to the live website
 
 #### Contributing
 Lindsey Gaughan (Me!) 
