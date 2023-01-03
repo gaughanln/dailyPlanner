@@ -25,4 +25,5 @@ Here is the [link](https://gaughanln.github.io/dailyPlanner/) to the live websit
 
 #### Contributing
 Lindsey Gaughan (Me!) 
-<img src="./Assets/gaughanln.png" alt="Lindsey Gaughan - Me!" style="height:300px;" /> 
+
+<img src="./Assets/gaughanln.jpg" alt="Lindsey Gaughan - Me!" style="height:300px;" /> 
